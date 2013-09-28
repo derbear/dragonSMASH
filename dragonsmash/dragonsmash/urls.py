@@ -10,6 +10,8 @@ admin.autodiscover()
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
+router.register(r'effects', views.EffectViewSet)
+router.register(r'clients', views.ClientViewSet)
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
