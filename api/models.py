@@ -3,11 +3,12 @@ from django.db import models
 DEFAULT_EFFECT_RADIUS = 20 # feet
 DEFAULT_COUNTDOWN_TIME = 60 # seconds
 
+# TODO: Inherit from user
 class Client(models.Model):
     username = models.CharField(max_length=30)
     score = models.BigIntegerField(default=0)
 
-    
+
 class Effect(models.Model):
     longitude = models.DecimalField(max_digits=10, decimal_places=7)
     latitude = models.DecimalField(max_digits=10, decimal_places=7)
@@ -15,4 +16,4 @@ class Effect(models.Model):
     time_initiated = models.DateTimeField(auto_now=True)
     time_countdown = models.IntegerField(default=DEFAULT_COUNTDOWN_TIME)
     client_source = models.ForeignKey('Client')
-        
+

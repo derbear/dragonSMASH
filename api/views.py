@@ -19,7 +19,7 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
-    
+
 
 class EffectViewSet(viewsets.ModelViewSet):
     queryset = Effect.objects.all()
@@ -30,4 +30,3 @@ class ClientViewSet(viewsets.ModelViewSet):
     queryset = Client.objects.all()
     serializer_class = ClientSerializer
 
-    
